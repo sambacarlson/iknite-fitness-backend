@@ -25,6 +25,17 @@ mongoose.connect(DB_URI)
   });
 
   //routes
+  app.use('/', (req, res) => {
+    const endpoints = {
+      "/": "list of endpoint",
+      "/categories": "json of all categories",
+      "/exercises": "json of all exercise",
+      "/exercises/:id": "create/update/delete and exercise",
+      "/categories/:id": "create/update/delete a category",
+      "docs": "https://github.com/sambacarlson/iknite-fitness-backend"
+    }
+    res.status(200).json(endpoints);
+  })
   app.use('/categories', categoryRouter);
   app.use('/exercises', exerciseRouter);
 
