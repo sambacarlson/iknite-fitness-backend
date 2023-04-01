@@ -7,6 +7,8 @@ import categoryRouter from "./routes/categoryRoutes";
 
 const app = express();
 
+/**  run app with npx ts-node app.ts */
+
 //connect to db and listen to changes
 const DB_URI = process.env.DB_URI;
 const PORT = process.env.PORT;
