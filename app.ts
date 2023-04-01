@@ -1,12 +1,15 @@
-require('dotenv').config()
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
 import express from "express";
 import mongoose from "mongoose";
 import exerciseRouter from "./routes/exerciseRoutes";
 import categoryRouter from "./routes/categoryRoutes";
 
+const environment = process.env
+console.log(environment.NODE_ENV);
 
 const app = express();
-
 //connect to db and listen to changes
 const DB_URI = process.env.DB_URI;
 const PORT = process.env.PORT;
