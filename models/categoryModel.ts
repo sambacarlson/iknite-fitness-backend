@@ -13,7 +13,11 @@ const categorySchema = new Schema({
   image: {
   type: String,
   required : true
-  }
+  },
+  exercises: {
+    type: Array, //TODO: Change to list of exercise IDs
+    required: false 
+  },
 });
 
 const Category = mongoose.model('Category', categorySchema)

@@ -12,14 +12,14 @@ ___For example___ : https://iknite-fitness.onrender.com/exercises to get json of
 
 | STATUS  | METHOD | ENDPOINT          | RESPONSE 
 | --------|--------|-------------------|----------
-| DOWN    | GET    | `/`               | list of all endpoints 
+| UP      | GET    | `/`               | list of all endpoints 
 | UP      | GET    | `/categories`     | json of all categories 
 | UP      | POST   | `/categories`     | creates a category
 | UP      | GET    | `/exercises`      | json of all exercises
 | UP      | POST   | `/exercises`      | creates an exercise
-| TESTING | PUT    | `/categories/:id` | updates category with given id
+| UP      | PATCH  | `/categories/:id` | updates category with given id
 | UP      | DELETE | `/categories/:id` | deletes category with given id
-| TESTING | PUT    | `/exercises/:id`  | updates exercise with given id
+| UP      | PATCH  | `/exercises/:id`  | updates exercise with given id
 | UP      | DELETE | `/exercises/:id`  | deletes exercise with given id
 
 <br>

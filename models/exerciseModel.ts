@@ -19,10 +19,6 @@ const exerciseSchema = new Schema({
     required: true,
     default: 5
   },
-  category: {
-    type: [String], //TODO: change category to be "Schema.Type.ObjectID" and add "ref: 'Category'"
-    required: true
-  },
   images: {
     type: [String], 
     required: false
