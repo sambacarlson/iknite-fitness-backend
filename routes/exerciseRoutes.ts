@@ -1,14 +1,14 @@
 import express from "express";
-import { exerciseController } from "../controllers/exerciseController";
+import { exercise_all, exercise_create_post, exercise_edit_post, exercise_delete } from "../controllers/exerciseController";
 
 const router = express.Router();
 
-router.get('/', exerciseController.exercise_all );
-router.post('/', exerciseController.exercise_create_post);
+router.get('/', exercise_all );
+router.post('/', exercise_create_post);
 
 //routes with cutom parts should always be placed at the bottom
-router.put('/:id', exerciseController.exercise_edit_post);
-router.delete('/:id', exerciseController.exercise_delete);
+router.delete('/:id', exercise_delete);
+router.patch('/:id', exercise_edit_post);
 
 //export
 export default router;
